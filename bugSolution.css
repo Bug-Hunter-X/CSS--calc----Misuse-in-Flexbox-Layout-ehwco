@@ -1,0 +1,13 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 300px;
+}
+
+.item {
+  width: calc(100% - 20px); /* Corrected: Subtracts from container's available space*/
+  background-color: lightblue;
+  margin: 10px;
+  box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+}
+/*The box-sizing property is crucial here. Without it, the padding and border would be added to the width, making the subtraction inaccurate. By setting box-sizing to border-box, the padding and border are included in the element's total width, allowing the calc() function to work correctly. */
